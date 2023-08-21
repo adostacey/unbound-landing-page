@@ -95,6 +95,8 @@ h4 {
 }
 
 .comp-layout {
+  margin: 0 auto;
+  max-width: 1400px;
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: repeat(3, 1fr);
@@ -141,8 +143,20 @@ h4 {
 }
 
 /* ! MEDIA QUERIES */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 300px 1fr;
+  }
   .comp-layout {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #comp-ooo {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  #comp-comments {
+    grid-row: 2/4;
   }
 }
