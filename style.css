@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --clr-neutral-700: #313a45;
-  --clr-neutral-900: #222222;
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-200: #e1e1e4; /* background */
+  --clr-neutral-700: #313a45; /* sidebar */
+  --clr-neutral-900: #222222; /* text */
 }
 
 *,
@@ -16,6 +18,7 @@
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  background: var(--clr-neutral-200);
   color: var(--clr-neutral-900);
 }
 
@@ -32,4 +35,48 @@ h2,
 h3,
 h4 {
   font-weight: 500;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  height: 100vh;
+}
+/* ! DOCUMENT GALLERY */
+.doc-gal {
+  background-color: var(--clr-neutral-700);
+  color: var(--clr-neutral-100);
+}
+
+.doc-gal--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.doc-gal--header h1 {
+  flex-basis: 80px;
+}
+
+.doc-gal--filter ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.doc-gal--filter a {
+  color: var(--clr-neutral-200);
+}
+
+.doc-gal--items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doc-gal-item {
+  flex-basis: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
