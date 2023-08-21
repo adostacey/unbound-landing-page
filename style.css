@@ -80,3 +80,69 @@ h4 {
   justify-content: center;
   align-items: center;
 }
+
+/* ! COMPONENT LAYOUT */
+.components {
+  height: 100vh;
+}
+
+.components header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: var(--clr-neutral-100);
+}
+
+.comp-layout {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  column-gap: 1rem;
+  padding: 1rem;
+}
+
+.comp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-neutral-100);
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.75);
+}
+
+.comp-small {
+  height: 4rem;
+}
+
+.comp-medium {
+  height: 20rem;
+}
+
+#comp-create {
+  grid-column: 1;
+}
+#comp-preview {
+  grid-row: 2;
+  grid-column: 1;
+}
+#comp-approval {
+  grid-row: 3;
+  grid-column: 1;
+}
+#comp-comments {
+  grid-column: 2;
+  grid-row: 1/4;
+}
+#comp-ooo {
+  grid-column: 3;
+}
+
+/* ! MEDIA QUERIES */
+@media (max-width: 768px) {
+  .comp-layout {
+    grid-template-columns: 1fr 2fr;
+  }
+}
